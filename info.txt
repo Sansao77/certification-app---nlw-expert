@@ -12,5 +12,7 @@ API REST
     - Parâmetros de rotas - [http://localho](http://localhost:8085/users/{nome}/{idade})
 
 ORM -> Object Relational Mapper (relaciona os dados do nosso objeto para a tabela)
+DTO -> Data Transfer Object (Forma de transferir informações necessárias)
+Entity -> Forma como a informação do programa será enviada ao banco de dados
 
 Repositório (Repository) -> Interagir com o banco de dados.

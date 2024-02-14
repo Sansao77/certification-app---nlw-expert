@@ -6,6 +6,8 @@ import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,6 +15,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -20,6 +23,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor //Cria um construtor com todos os atributos
 @NoArgsConstructor //Cria um construtor vázio
 @Entity(name = "students") //Serve para configurar os dados em uma tabela 'students' para o banco de dados
+@Builder
 public class StudentEntity {
     
     @Id
@@ -37,6 +41,7 @@ public class StudentEntity {
      */
     
     @OneToMany(mappedBy = "studentEntity")
+    @JsonBackReference
     private List<CertificationStudentEntity> certificationStudentEntity;
 
     @CreationTimestamp

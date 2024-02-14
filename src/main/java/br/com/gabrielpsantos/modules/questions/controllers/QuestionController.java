@@ -14,7 +14,6 @@ import br.com.gabrielpsantos.modules.questions.dto.QuestionResultDTO;
 import br.com.gabrielpsantos.modules.questions.entities.AlternativesEntity;
 import br.com.gabrielpsantos.modules.questions.entities.QuestionEntity;
 import br.com.gabrielpsantos.modules.questions.repositories.QuestionRepository;
-import lombok.var;
 
 @RestController
 @RequestMapping("/questions")
